@@ -1,5 +1,5 @@
 import React from "react";
-//import Menu from './menu.jsx'
+import Menu from "./Menu";
 
 export default function Home() {
   // <div id="circulo" className="yellowCircle"></div>
@@ -39,7 +39,9 @@ export default function Home() {
         <div id="homeBottom">
           <img src="images/homeBottomRectangle.png" />
         </div>
-        {/* <div><Menu /></div> */}
+        <div>
+          <Menu />
+        </div>
       </div>
     </div>
   );
