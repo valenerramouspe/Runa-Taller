@@ -1,38 +1,415 @@
-.App {
-  text-align: center;
+@import "slick.css";
+@import "slick-theme.css";
+
+@font-face {
+  font-family: "DINNextLTPro Medium";
+  src: url(fonts/DINNextLTPro-Medium.otf);
 }
 
-.App-logo {
-  height: 40vmin;
+@font-face {
+  font-family: "DINNextLTPro Regular";
+  src: url(fonts/DINNextLTPro-Regular.otf);
+}
+
+html,
+body,
+#app,
+#app > div {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*[data-reactroot] {
+	height: 100% !important; 
+}*/
+
+#home {
+  background-image: url(images/brown-paper-cardboard-and-texture-11.png);
+  /*	background-color: #bfafa0;*/
+  height: 100% !important;
+  width: 100vw;
+}
+
+#homeBlock {
+  margin: auto;
+  position: absolute;
+  left: 30%;
+}
+
+#homeTop {
+  display: block;
+  margin-left: 35%;
+  padding-top: 2%;
+}
+
+#homeMiddle {
+  display: block;
+  margin-left: 30%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#homeBottom {
+  display: block;
+  margin-left: 40%;
+}
+
+.cutTop img {
+  width: 30%;
+  height: 25%;
+  display: block;
+  margin-left: 35%;
+  padding-top: 2%;
+}
+.cutMiddle img {
+  height: 25%;
+  width: 30%;
+  padding-top: 3%;
+  display: block;
+  margin-left: 30%;
+}
+
+.cutBottom img {
+  height: 25%;
+  width: 30%;
+  padding-top: 3%;
+  display: block;
+  margin-left: 40%;
+}
+
+/*.cuts:active img{
+	padding-top: 0;
+	margin-left: 40%;
+	height: 33%;
+	width: 35%;
+}*/
+
+.hola img {
+  padding-top: 0;
+  margin-left: 54%;
+  height: 43%;
+  width: 45%;
+}
+
+.cuts .greenCircle {
+  width: 500px;
+  position: fixed;
+  height: 500px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 50%;
+  background: #00ab4e;
+  position: absolute;
+  bottom: 12%;
+  left: 25%;
+  opacity: 0.7;
+  pointer-events: none;
+  /*overflow: hidden;*/
+  transition: all 1s ease;
+  transition-property: height, width, left;
+}
+
+.cuts:active .greenCircle {
+  height: 100vh;
+  width: 100vw;
+  left: 20%;
+}
+
+.yellowCircle {
+  width: 500px;
+  position: fixed;
+  height: 500px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 50%;
+  background: #e7ae00;
+  position: absolute;
+  bottom: 15%;
+  left: 25%;
+  opacity: 0.7;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#textBlock {
+  position: absolute;
+  z-index: 5;
+  left: 33%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#runa {
+  z-index: 5;
+  left: 35%;
+  font-size: 120px;
+  margin: 0;
+  color: white;
+  font-weight: 1;
+}
+
+#estudio {
+  left: 30%;
+  z-index: 5;
+  margin: 0;
+}
+
+.navbar {
+  /*overflow: hidden;*/
+  font-family: "DINNextLTPro Medium";
+  position: fixed;
+  bottom: 12%;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.idle {
+  float: left;
+  color: white;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: 6%;
+  opacity: 0.6;
+}
+
+.selected {
+  float: left;
+  color: white;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: 6%;
+  opacity: 1;
+}
+
+/* Change the color of links on hover */
+.idle:hover {
+  opacity: 1;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  opacity: 1;
+}
+
+#carousel {
+  height: 100% !important;
+  /*	overflow: hidden;*/
+}
+
+.cutImage {
+  width: 40%;
+  margin-left: 32%;
+  padding-top: 30%;
+  cursor: pointer;
+  background-image: url(images/algiz3rectangulos.png);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+}
+
+.cutImage:hover {
+  background-image: url(images/algiz.jpg);
+  background-size: 85%;
+}
+
+.swiper {
+  position: absolute;
+  margin-top: 35%;
+  background-color: grey;
+  opacity: 0.5;
+  padding: 1%;
+  border-radius: 50%;
+  color: #cecece;
+  border: none;
+  outline: none;
+  font-size: 60px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.swiper:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.swipeRight {
+  margin-left: 82%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swipeLeft {
+  margin-left: 75%;
+}
+
+#proyecto1 {
+  background-color: #00ab4e;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 3%;
+  box-sizing: border-box;
+  /*overflow: hidden;*/
+}
+
+/*.cuts{
+	overflow-x: hidden
+}*/
+
+.coloredCuts {
+  margin: auto;
+  background-color: #186f11;
+  padding: 70px;
+  position: relative;
+  z-index: 1000;
+  width: 950px;
+  height: 1700px;
+  z-index: 5;
+}
+
+.cuts img {
+  transition: all 1s ease;
+  transition-property: padding-top, margin-left, height, width;
+}
+
+.coloredCuts img {
+  transition: all 1s ease;
+  transition-property: padding-top, margin-left, height, width;
+}
+
+.proyecto2 {
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+}
+
+.galeria {
+  margin: 0;
+  position: absolute;
+  font-size: 9vh;
+  top: 7%;
+  left: 10%;
+}
+
+.projectName {
+  position: absolute;
+  top: 15%;
+  font-size: 7vh;
+  color: white;
+  left: 23%;
+}
+
+#logoHome {
+  position: absolute;
+  height: 10%;
+  margin-left: 3%;
+  margin-top: 3%;
+  z-index: 10;
+}
+
+.visible {
+  position: absolute;
+  top: 40px;
+  margin-left: 50px;
+  width: 400px;
+  z-index: 5;
+}
+
+.invisible {
+  display: none;
+}
+
+.productTitle {
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+  text-align: center;
+}
+
+.productDescription {
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-weight: bold;
+  z-index: 5000;
+  cursor: pointer;
+}
+
+.invisibleMenu {
+  display: none;
+}
+
+.headerNosotras {
+  height: 600px;
+  background-color: #e7ae00;
+}
+
+.transparentBlock {
+  opacity: 0.7;
+  z-index: 5;
+  background-color: #e7ae00;
+  height: 100%;
+}
+
+.nosotrasMenu {
+  position: relative;
+}
+
+.tituloNosotras {
+  position: absolute;
+  top: 175px;
+  left: 375px;
+  height: 175px;
+}
+
+.subtitleNosotras {
+  font-family: "DINNextLTPro Regular";
+  position: absolute;
+  width: 500px;
+  top: 400px;
+  color: white;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0;
+  left: 0;
+}
+
+.nosotrasLowerBlock {
+  /*display: table;*/
+  background-color: #f6bd10;
+  color: white;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.nosotrasLeftColumn {
+  display: table-cell;
+  width: 25%;
+}
+
+.nosotrasRightColumn {
+  display: table-cell;
+  width: 25%;
+}
+
+.taglineNosotras {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 65px;
+}
+
+.textNosotras {
+  margin-top: 120px;
+  font-size: 25px;
 }
