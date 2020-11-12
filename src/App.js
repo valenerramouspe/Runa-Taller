@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
-import Home from "./Components/Home";
 
 export default function App(props) {
   return (
     <div>
-      <Link to="/home">
-        <img id="logoHome" src="images/Logo-home.png" />
+      <Link to="/">
+        <img id="logoHome" src="images/Logo-home.png" alt="" />
       </Link>
       {props.children}
     </div>

@@ -28,16 +28,16 @@ export default function Home() {
     <div id="home">
       <div id="blockHome">
         <div id="homeTop">
-          <img src="images/homeTopRectangle.png" />
+          <img src="images/homeTopRectangle.png" alt="" />
         </div>
         <div id="homeMiddle">
           <div id="textBlock">
-            <img src="images/titulo.png" />
+            <img src="images/titulo.png" alt="" />
           </div>
-          <img src="images/homeMiddleRectangle.png" />
+          <img src="images/homeMiddleRectangle.png" alt="" />
         </div>
         <div id="homeBottom">
-          <img src="images/homeBottomRectangle.png" />
+          <img src="images/homeBottomRectangle.png" alt="" />
         </div>
         <div>
           <Menu />

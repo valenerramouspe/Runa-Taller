@@ -1,26 +1,33 @@
 import React, { useState } from "react";
-//import Link from 'react-router';
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   const [selected, setSelected] = useState("");
   return (
     <div className="navbar">
-      <a
-        className={selected == "Nosotras" ? "selected" : "idle"}
+      {/* <a
+        className={selected === "Nosotras" ? "selected" : "idle"}
         onClick={() => setSelected("Nosotras")}
-        href="#nosotras"
+        href="nosotras"
       >
         Nosotras
-      </a>
+      </a> */}
+      <Link
+        className={selected === "Nosotras" ? "selected" : "idle"}
+        to="/nosotras"
+        onClick={() => setSelected("Nosotras")}
+      >
+        Nosotras
+      </Link>
       <a
-        className={selected == "Galeria" ? "selected" : "idle"}
+        className={selected === "Galeria" ? "selected" : "idle"}
         onClick={() => setSelected("Galeria")}
         href="#galeria"
       >
         Proyectos
       </a>
       <a
-        className={selected == "Tienda Online" ? "selected" : "idle"}
+        className={selected === "Tienda Online" ? "selected" : "idle"}
         onClick={() => setSelected("Tienda Online")}
         href="#tienda"
       >
