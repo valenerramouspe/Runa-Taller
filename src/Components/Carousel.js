@@ -33,6 +33,8 @@ export default function Carousel(props) {
               title={proyecto.title}
               description={proyecto.description}
               color={proyecto.color}
+              popupColor={proyecto.popupColor}
+              buttonColor={proyecto.buttonColor}
             />
           ))}
         </Slider>

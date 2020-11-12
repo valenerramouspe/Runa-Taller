@@ -5,6 +5,7 @@ import App from "./App";
 import Home from "./Components/Home";
 import Nosotras from "./Components/Nosotras";
 import Carousel from "./Components/Carousel";
+import Contacto from "./Components/Contacto";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
@@ -21,6 +22,9 @@ ReactDOM.render(
       </Route>
       <Route path="/proyectos">
         <Carousel />
+      </Route>
+      <Route path="/contacto">
+        <Contacto />
       </Route>
     </Switch>
   </BrowserRouter>,

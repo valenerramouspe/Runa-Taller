@@ -15,7 +15,10 @@ export default function Proyecto(props) {
 
   return (
     <div id="proyecto1" style={{ backgroundColor: props.color }}>
-      <div className={active ? "coloredCuts" : "cuts"}>
+      <div
+        style={{ backgroundColor: active ? props.popupColor : null }}
+        className={active ? "coloredCuts" : "cuts"}
+      >
         <div className={active ? "hola" : "cutTop"}>
           <img
             src={props.imgTop}
@@ -43,7 +46,17 @@ export default function Proyecto(props) {
         <div className={active ? "visible" : "invisible"}>
           <p className="productTitle"> ALGIZ </p>
           <p className="productDescription">{props.description}</p>
+          <button
+            className="productsButton"
+            style={{
+              display: active ? "block" : "none",
+              backgroundColor: props.buttonColor,
+            }}
+          >
+            MORE
+          </button>
         </div>
+
         <div
           style={{ display: "none" }}
           id="circulo"

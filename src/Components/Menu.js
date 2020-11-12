@@ -27,11 +27,11 @@ export default function Menu() {
         Proyectos
       </Link>
       <a
-        className={selected === "Tienda Online" ? "selected" : "idle"}
-        onClick={() => setSelected("Tienda Online")}
-        href="#tienda"
+        className={selected === "Contacto" ? "selected" : "idle"}
+        onClick={() => setSelected("Contacto")}
+        href="/contacto"
       >
-        Packaging Bio
+        Contacto
       </a>
     </div>
   );
