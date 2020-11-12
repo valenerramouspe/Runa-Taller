@@ -25,23 +25,21 @@ export default function Home() {
   //   }
   // }
   return (
-    <div id="home">
-      <div id="blockHome">
-        <div id="homeTop">
-          <img src="images/homeTopRectangle.png" alt="" />
+    <div className="home">
+      <div className="homeTop">
+        <img src="images/homeTopRectangle.png" alt="" />
+      </div>
+      <div className="homeMiddle">
+        <div className="textBlock">
+          <img src="images/titulo.png" alt="" />
         </div>
-        <div id="homeMiddle">
-          <div id="textBlock">
-            <img src="images/titulo.png" alt="" />
-          </div>
-          <img src="images/homeMiddleRectangle.png" alt="" />
-        </div>
-        <div id="homeBottom">
-          <img src="images/homeBottomRectangle.png" alt="" />
-        </div>
-        <div>
-          <Menu />
-        </div>
+        <img src="images/homeMiddleRectangle.png" />
+      </div>
+      <div className="homeBottom">
+        <img src="images/homeBottomRectangle.png" />
+      </div>
+      <div>
+        <Menu />
       </div>
     </div>
   );

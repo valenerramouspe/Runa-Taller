@@ -19,13 +19,13 @@ export default function Menu() {
       >
         Nosotras
       </Link>
-      <a
-        className={selected === "Galeria" ? "selected" : "idle"}
+      <Link
+        className={selected === "Proyectos" ? "selected" : "idle"}
         onClick={() => setSelected("Galeria")}
-        href="#galeria"
+        to="/proyectos"
       >
         Proyectos
-      </a>
+      </Link>
       <a
         className={selected === "Tienda Online" ? "selected" : "idle"}
         onClick={() => setSelected("Tienda Online")}
