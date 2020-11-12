@@ -33,10 +33,10 @@ export default function Home() {
         <div className="textBlock">
           <img src="images/titulo.png" alt="" />
         </div>
-        <img src="images/homeMiddleRectangle.png" />
+        <img src="images/homeMiddleRectangle.png" alt="" />
       </div>
       <div className="homeBottom">
-        <img src="images/homeBottomRectangle.png" />
+        <img src="images/homeBottomRectangle.png" alt="" />
       </div>
       <div>
         <Menu />

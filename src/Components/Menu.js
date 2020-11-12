@@ -21,7 +21,7 @@ export default function Menu() {
       </Link>
       <Link
         className={selected === "Proyectos" ? "selected" : "idle"}
-        onClick={() => setSelected("Galeria")}
+        onClick={() => setSelected("Proyectos")}
         to="/proyectos"
       >
         Proyectos
