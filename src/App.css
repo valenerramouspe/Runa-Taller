@@ -208,10 +208,10 @@ body,
   transition: background-image 1s;
 }
 
-.cutImage:hover {
+/* .cutImage:hover {
   background-image: url(images/algiz.jpg);
   background-size: 85%;
-}
+} */
 
 .swiper {
   position: absolute;
