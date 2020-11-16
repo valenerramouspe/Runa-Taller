@@ -5,6 +5,7 @@ import App from "./App";
 import Home from "./Components/Home";
 import Nosotras from "./Components/Nosotras";
 import Carousel from "./Components/Carousel";
+import Individual from "./Components/Individual";
 import Contacto from "./Components/Contacto";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -25,6 +26,9 @@ ReactDOM.render(
       </Route>
       <Route path="/contacto">
         <Contacto />
+      </Route>
+      <Route path="/project/id=:id">
+        <Individual />
       </Route>
     </Switch>
   </BrowserRouter>,

@@ -26,6 +26,7 @@ export default function Carousel(props) {
           {data.map((proyecto, i) => (
             <Proyecto
               key={proyecto.id}
+              id={proyecto.id}
               menuVisibility={menuVisibility}
               imgTop={proyecto.imgTop}
               imgMiddle={proyecto.imgMiddle}

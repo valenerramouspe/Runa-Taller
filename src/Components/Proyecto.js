@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Proyecto(props) {
   const [active, setActive] = useState(false);
+
+  let route = `project/id=${props.id}`;
 
   function handleOpen() {
     props.menuVisibility("open");
@@ -44,17 +47,19 @@ export default function Proyecto(props) {
           />
         </div>
         <div className={active ? "visible" : "invisible"}>
-          <p className="productTitle"> ALGIZ </p>
+          <p className="productTitle">{props.title}</p>
           <p className="productDescription">{props.description}</p>
-          <button
-            className="productsButton"
-            style={{
-              display: active ? "block" : "none",
-              backgroundColor: props.buttonColor,
-            }}
-          >
-            MORE
-          </button>
+          <Link to={route}>
+            <button
+              className="productsButton"
+              style={{
+                display: active ? "block" : "none",
+                backgroundColor: props.buttonColor,
+              }}
+            >
+              MORE
+            </button>
+          </Link>
         </div>
 
         <div
