@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Menu() {
-  const [selected, setSelected] = useState("");
+  let [selected, setSelected] = useState("");
   return (
     <div className="navbar">
       {/* <a
@@ -26,13 +26,13 @@ export default function Menu() {
       >
         Proyectos
       </Link>
-      <a
+      <Link
         className={selected === "Contacto" ? "selected" : "idle"}
         onClick={() => setSelected("Contacto")}
-        href="/contacto"
+        to="/contacto"
       >
         Contacto
-      </a>
+      </Link>
     </div>
   );
 }

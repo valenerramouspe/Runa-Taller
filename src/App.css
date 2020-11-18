@@ -171,6 +171,7 @@ body,
 
 .selected {
   float: left;
+  opacity: 1;
   color: white;
   display: block;
   color: #f2f2f2;
@@ -188,7 +189,7 @@ body,
 }
 
 /* Add a color to the active/current link */
-.navbar a.active {
+.navbar .active {
   opacity: 1;
 }
 
@@ -422,4 +423,59 @@ body,
 }
 .productsButton:hover {
   cursor: pointer;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-top: 70px;
+  color: white;
+  font-size: 45px;
+}
+
+.emailInput {
+  display: block;
+  margin: 25px auto;
+  width: 400px;
+  border: 3px solid #9e801d;
+  border-radius: 8px;
+  height: 30px;
+  outline: none;
+}
+
+.contactForm {
+  margin: 50px auto;
+  text-align: center;
+}
+.formButton {
+  cursor: pointer;
+  display: block;
+  margin: 25px auto;
+  height: 50px;
+  width: 125px;
+  border: 1px solid #543200;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #9e801d;
+  color: white;
+}
+.formButton:focus {
+  outline: none;
+}
+
+.contactMessage {
+  height: 150px;
+  width: 400px;
+  border: 3px solid #9e801d;
+  border-radius: 8px;
+  outline: none;
+}
+
+.thankYou {
+  margin: 125px auto;
+  width: 300px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: #734500;
 }

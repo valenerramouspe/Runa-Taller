@@ -12,9 +12,4 @@ export default function Individual(props) {
       <p>{result.description}</p>
     </div>
   );
-  //(
-  //     <div>
-  //       <p>{data.find((x) => x.id === params.id).id}</p>
-  //     </div>
-  //   );
 }
