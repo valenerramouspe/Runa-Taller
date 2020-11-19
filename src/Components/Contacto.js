@@ -49,7 +49,7 @@ export default function Contacto() {
         <h2 className="contactHeader">CONTACTO</h2>
         {isSent()}
       </div>
-      <Menu />
+      <Menu highlight="Contacto" />
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function Home() {
         <img src="images/homeBottomRectangle.png" alt="" />
       </div>
       <div>
-        <Menu />
+        <Menu highlight="home" />
       </div>
     </div>
   );

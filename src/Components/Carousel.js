@@ -9,7 +9,6 @@ export default function Carousel(props) {
 
   function menuVisibility(how) {
     setPopup(how);
-    console.log(popup);
   }
   var settings = {
     dots: popup === "closed" ? true : false,
@@ -41,7 +40,7 @@ export default function Carousel(props) {
         </Slider>
       </div>
       <div className={popup === "closed" ? "visibleMenu" : "invisibleMenu"}>
-        <Menu highlight="Galeria" />
+        <Menu highlight="Proyectos" />
       </div>
     </div>
   );
